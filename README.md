@@ -29,6 +29,28 @@ This benchmark mapping tracks agentic code review PRs across 9 different AI-powe
 | aspnetcore | C# | 10 |
 | redis | C | 9 |
 
+### Metric Definitions
+
+| Metric | Description |
+|--------|-------------|
+| **Precision** | *"When I flag something, am I right?"* — Of all issues reported, how many were actual bugs. High precision = few false alarms. |
+| **Recall** | *"Did I catch everything?"* — Of all real bugs that existed, how many did the tool find. High recall = few things slip through. |
+| **F1 Score** | The harmonic mean of precision & recall — balances both metrics to show overall effectiveness at finding real issues without crying wolf. |
+
+### Benchmark Results
+
+| Agent | # GT Findings | Precision (%) | Recall (%) | F1 (%) |
+|-------|---------------|---------------|------------|--------|
+| **Qodo - Exhaustive** | 580 | 63.8 | 56.7 | **60.1** |
+| **Qodo - Precise** | 580 | 74.5 | 44.2 | **55.4** |
+| Augment | 580 | 70.6 | 32.1 | 44.1 |
+| Copilot | 580 | 50.1 | 37.4 | 42.8 |
+| Cursor | 580 | 78.5 | 26.2 | 39.3 |
+| Greptile | 580 | 68.5 | 27.2 | 39.0 |
+| Codex | 580 | 83.0 | 24.3 | 37.6 |
+| Coderabbit | 580 | 53.7 | 19.0 | 28.0 |
+| Sentry | 580 | 85.3 | 13.8 | 23.7 |
+
 ---
 
 ## PR Mapping Table
